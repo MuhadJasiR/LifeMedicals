@@ -66,10 +66,10 @@ class OrderOrBookingContainer extends StatelessWidget {
             ),
             Container(
               decoration: const BoxDecoration(
-                color: kPrimaryLightColor,
+                color: kPrimaryColor,
                 borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(15),
-                    bottomRight: Radius.circular(15)),
+                    bottomLeft: Radius.circular(5),
+                    bottomRight: Radius.circular(5)),
               ),
               width: double.infinity,
               child: Padding(
@@ -77,7 +77,7 @@ class OrderOrBookingContainer extends StatelessWidget {
                 child: Text(
                   offerTitle,
                   style: const TextStyle(
-                      color: kPrimaryColor, fontWeight: FontWeight.bold),
+                      color: kWhiteColor, fontWeight: FontWeight.bold),
                 ),
               ),
             )

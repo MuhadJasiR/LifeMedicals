@@ -39,7 +39,7 @@ class HomeScreen extends StatelessWidget {
             // const TopBanner2(),
             kHeight(10),
             const OrderOrBookingWidgets(),
-            kHeight(10),
+            kHeight(20),
             const OrderViaWIdget(),
             kHeight(10),
             TopBrandCardWidget(),

@@ -1,15 +1,25 @@
+// ignore_for_file: deprecated_member_use
+
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:life_medicals/core/colors/color.dart';
+import 'package:life_medicals/presentation/home/cart/cart_screen.dart';
 import 'package:life_medicals/presentation/home/home_screen.dart';
+import 'package:life_medicals/presentation/home/profile/profile_screen.dart';
 
 class BottomNavScreen extends StatelessWidget {
   const BottomNavScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    List screens = [
+      const HomeScreen(),
+      const CartScreen(),
+      const HomeScreen(),
+      const ProfileScreen()
+    ];
     ValueNotifier<int> currentIndex = ValueNotifier(0);
     return Scaffold(
       bottomNavigationBar: ValueListenableBuilder(
@@ -53,7 +63,10 @@ class BottomNavScreen extends StatelessWidget {
                   label: "settings"),
             ]),
       ),
-      body: const HomeScreen(),
+      body: ValueListenableBuilder(
+        valueListenable: currentIndex,
+        builder: (context, value, child) => screens[currentIndex.value],
+      ),
     );
   }
 }
