@@ -7,5 +7,7 @@ Color? kGreyColor300 = Colors.grey[300];
 Color? kGreyColor200 = Colors.grey[200];
 const Color kGreyColor = Colors.grey;
 
-const Color kPrimaryColor = Color.fromARGB(255, 47, 136, 50);
+const Color kPrimaryColor = Color(0xFF219F85);
+// const Color kPrimaryColor = Color.fromARGB(255, 47, 136, 50);
+
 const Color kPrimaryLightColor = Color.fromARGB(255, 224, 253, 226);

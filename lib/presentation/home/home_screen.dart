@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-
 import 'package:life_medicals/core/colors/color.dart';
 import 'package:life_medicals/core/size/size.dart';
-import 'package:life_medicals/presentation/bottom_nav_screen.dart';
+
 import 'package:life_medicals/presentation/home/widgets/Order_via_widget.dart';
 import 'package:life_medicals/presentation/home/widgets/booking_order_container.dart';
 import 'package:life_medicals/presentation/home/widgets/popular_product_widget.dart';
 import 'package:life_medicals/presentation/home/widgets/top_brand_card.dart';
-
-import 'widgets/top_banner.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -35,8 +31,8 @@ class HomeScreen extends StatelessWidget {
             kHeight(10),
             const SearBarWidget(),
             kHeight(10),
-            const TopBanner(),
-            // const TopBanner2(),
+            // const TopBanner(),
+            const TopBanner2(),
             kHeight(10),
             const OrderOrBookingWidgets(),
             kHeight(20),
@@ -44,7 +40,7 @@ class HomeScreen extends StatelessWidget {
             kHeight(10),
             TopBrandCardWidget(),
             kHeight(25),
-            const PopularProductListWidget()
+            PopularProductListWidget()
           ],
         ),
       ),

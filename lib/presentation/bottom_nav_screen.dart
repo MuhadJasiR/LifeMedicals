@@ -5,9 +5,9 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:life_medicals/core/colors/color.dart';
-import 'package:life_medicals/presentation/home/cart/cart_screen.dart';
+import 'package:life_medicals/presentation/cart/cart_screen.dart';
 import 'package:life_medicals/presentation/home/home_screen.dart';
-import 'package:life_medicals/presentation/home/profile/profile_screen.dart';
+import 'package:life_medicals/presentation/profile/profile_screen.dart';
 
 class BottomNavScreen extends StatelessWidget {
   const BottomNavScreen({super.key});
