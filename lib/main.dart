@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:life_medicals/presentation/bottom_nav_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:life_medicals/core/theme/app_theme.dart';
+import 'package:life_medicals/core/router/app_router.dart';
+import 'package:life_medicals/features/home/presentation/bloc/home_screen_bloc.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(MultiBlocProvider(providers: [
+    BlocProvider(
+      create: (_) => HomeScreenBloc(),
+    ),
+  ], child: const MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -10,10 +18,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'Life Medicals',
-      theme: ThemeData(),
-      home: const BottomNavScreen(),
+      theme: AppTheme.lightTheme,
+      routerConfig: appRouter,
     );
   }
 }
