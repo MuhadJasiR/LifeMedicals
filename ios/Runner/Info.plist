@@ -54,5 +54,9 @@
 		<true/>
 		<key>UIStatusBarHidden</key>
 		<false/>
+		<key>NSMicrophoneUsageDescription</key>
+			<string>Need to record user voice to communicate with Gemini</string>
+		<key>NSCameraUsageDescription</key>
+			<string>Need camera to show Gemini live video stream</string>
 	</dict>
 </plist>

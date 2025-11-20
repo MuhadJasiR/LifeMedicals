@@ -40,11 +40,21 @@ dependencies:
   flutter_bloc: ^8.1.6
   meta: ^1.15.0
   bloc: ^8.1.4
-  equatable: ^2.0.5
-  image_picker: ^1.1.2
+  equatable: ^2.0.7
+  image_picker: ^1.2.0
   flutter_native_splash: ^2.4.7
   url_launcher: ^6.3.2
   go_router: ^16.3.0
+  tutorial_coach_mark: ^1.3.3
+  record: ^6.1.2
+  flutter_soloud: ^3.4.3
+  camera: ^0.11.3
+  firebase_ai: ^3.5.0
+  web_socket_channel: ^3.0.3
+  flutter_animate: ^4.5.2
+  flutter_riverpod: ^3.0.3
+  firebase_core: ^4.2.1
+  get_it: ^9.0.5
 
 dev_dependencies:
   flutter_test:

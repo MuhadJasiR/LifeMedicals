@@ -91,13 +91,6 @@ class _SearchHeaderState extends State<SearchHeader> {
           icon: const Icon(Icons.mic_none),
           onPressed: () {},
         ),
-        IconButton(
-          tooltip: 'Scan prescription',
-          icon: const Icon(Icons.document_scanner_outlined),
-          onPressed: () {
-            // open OCR or camera flow
-          },
-        ),
       ],
       onChanged: _onQueryChanged,
     );

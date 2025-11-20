@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:life_medicals/core/theme/color_schemes.dart';
 import 'package:life_medicals/core/size/size.dart';
-import 'package:life_medicals/features/home/presentation/bloc/home_screen_bloc.dart';
+import 'package:life_medicals/features/home/presentation/bloc/home/home_screen_bloc.dart';
+import 'package:life_medicals/features/prescription/presentation/cubit/prescription_upload_cubit.dart';
 
 class OrderViaWIdget extends StatelessWidget {
   const OrderViaWIdget({
@@ -13,6 +15,7 @@ class OrderViaWIdget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final bloc = context.read<HomeScreenBloc>();
+    final cubit = context.read<PrescriptionUploadCubit>();
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
       decoration: BoxDecoration(
@@ -30,35 +33,6 @@ class OrderViaWIdget extends StatelessWidget {
       child: Column(
         children: [
           Row(
-            children: [
-              Expanded(
-                child: Divider(
-                  color: Colors.grey[300],
-                  thickness: 1,
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                child: Text(
-                  "ORDER VIA",
-                  style: TextStyle(
-                    color: kPrimaryColor,
-                    fontWeight: FontWeight.w600,
-                    fontSize: 12,
-                    letterSpacing: 0.5,
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Divider(
-                  color: Colors.grey[300],
-                  thickness: 1,
-                ),
-              ),
-            ],
-          ),
-          kHeight(16),
-          Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               _buildActionButton(
@@ -75,7 +49,7 @@ class OrderViaWIdget extends StatelessWidget {
               _buildActionButton(
                 icon: Icons.document_scanner,
                 label: "Prescription",
-                onTap: () {},
+                onTap: () => cubit.pickImage(ImageSource.gallery),
               ),
               Container(
                 width: 1,

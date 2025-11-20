@@ -31,7 +31,7 @@ class PopularProductListWidget extends StatelessWidget {
         ),
         kHeight(12),
         SizedBox(
-          height: 220,
+          height: 230,
           width: double.infinity,
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
